@@ -12,6 +12,21 @@ jQuery(function($) {
         $('body').removeClass('offcanvas');
 		$('.offcanvas_menu').removeClass('bodycanvas');
     });
+    
+    
+    /* offcanvas form instead of nav */
+    
+     $('.form_toggler').on('click', function(event) {
+        event.preventDefault();
+        $('body').addClass('offcanvas');
+		$('.offcanvas_form').addClass('bodycanvas');
+    });
+    $('.close_offcanvas, .offcanvas_overlay').on('click', function(event) {
+        event.preventDefault();
+        $('body').removeClass('offcanvas');
+		$('.offcanvas_form').removeClass('bodycanvas');
+    });
+    
 	
 	/* Brand Slider */
 	$("#brand_slider .slider-items").owlCarousel({

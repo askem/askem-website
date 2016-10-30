@@ -52,6 +52,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {-webkit-appe
 @-o-viewport {width: device-width;}
 @viewport {width: device-width;}
 h1, h2, h3, h4, h5, h6 {color: #261f53; text-rendering: optimizeLegibility !important; -webkit-font-smoothing: antialiased !important; margin: 0px;}
+
 body h2 {font-size: 32px; line-height: 42px; margin: 0px 0px 36px 0px; text-align: center; font-weight: 600; color: #463f73; }
 body p {font-size: 16px; line-height: 28px; color: #34474f;}
 body img {max-width: 100%;}
@@ -61,7 +62,7 @@ body img {max-width: 100%;}
 .mp_none {margin: 0px !important; padding: 0px !important;}
 .page_divider {margin: 25px auto; display: inline-block; width: 100%; height: 1px;}
 
-#overview, #features_tab, #features, #screenshot, #team, #blog, #pricing, #testimonials, #newsletter {width: 100%; min-height: 50px; padding: 95px 0px 50px 0px; margin: 0px;}
+#overview, #features_tab, #features, #screenshot, #hmfeatures, #team, #blog, #pricing, #testimonials, #newsletter, #download, #altfeaturess, #textblock {width: 100%; min-height: 50px; padding: 95px 0px 50px 0px; margin: 0px;}
 div.even_div {background: #f0f0f0;}
 .btn { border-radius: 7px; padding: 8px 36px; font-size: 15px; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;}
 .btn_glob {background-color: #ee1fb1; color: #fff;}
@@ -96,7 +97,12 @@ div.even_div {background: #f0f0f0;}
 #header .main_navigation {float: right; display: inline-block; line-height: 20px;}
 #header .main_navigation li {width: auto; float: left; margin-right: 24px;}
 #header .main_navigation li a {color: #fff; font-weight: 600; font-size: 13px; letter-spacing: 0.08em; padding: 5px 0px 5px 0px; text-transform: uppercase; display: block; border-bottom: 2px solid transparent;}
-
+#header .main_navigation li a:before, 
+#header .main_navigation li a:after {display: inline-block; opacity: 0; -webkit-transition: -webkit-transform 0.3s, opacity 0.2s; -moz-transition: -moz-transform 0.3s, opacity 0.2s; transition: transform 0.3s, opacity 0.2s;}
+#header .main_navigation li a:before {margin-right: 7px; content: '['; -webkit-transform: translateX(20px); -moz-transform: translateX(20px); transform: translateX(20px);}
+#header .main_navigation li a:after {margin-left: 7px; content: ']'; -webkit-transform: translateX(-20px); -moz-transform: translateX(-20px); transform: translateX(-20px);}
+#header .main_navigation li a:hover:before, #header .main_navigation li a:hover:after, #header .main_navigation li a:focus:before, 
+#header .main_navigation li a:focus:after {opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); transform: translateX(0px);}
 #header .main_navigation li a:hover {color: #e7e7e7;  border-bottom: 2px solid #ee1fb1;}
 
 #header .main_navigation li.get_quote {background-color: #ee1fb1; display: block; border-radius: 4px; padding: 0 20px; transition: all ease 0.3s; -webkit-transition: all ease 0.3s;}
@@ -104,8 +110,7 @@ div.even_div {background: #f0f0f0;}
 #header .main_navigation li.get_quote a:hover {border-bottom: 2px solid transparent;}
 
 
-#header .header_content {display: block; padding: 44px 0px 0px 0px; width: 48%; margin: 0 auto; float: none; text-align: center;}
-
+#header .header_content {display: block; padding: 44px 0px 0px 0px; /*width: 48%;*/ margin: 0 auto; float: none; text-align: center;}
 #header .header_content h1 {display: inline-block; font-size: 60px; color: #FFF; font-weight: 800; line-height: 75px; margin: 0px;}
 #header .header_content h1 span {font-size: 60px; color: #fff; font-weight:800;}
 #header .header_content h4 {font-size: 18px; color: #e6e6e6; line-height: 35px; margin: 50px 0px 0px 0px;}
@@ -120,7 +125,7 @@ div.even_div {background: #f0f0f0;}
 
 
 /* homepage overrides */
-#header.home .header_content {width: 100%; padding-top:176px;}
+#header.home .header_content {width: 100%; padding-top:100px;}
 #header.home {display: block; min-height: 960px; margin:0px; padding: 40px 0px; position: relative; background: url(../img/hero-bkgd.jpg) no-repeat center center; -webkit-background-size: cover; background-size: cover;}
 #header.home h1 {margin-bottom: 18px;}
 #header.home h2 {color: #FFF; font-size: 28px;}
@@ -136,8 +141,9 @@ div.even_div {background: #f0f0f0;}
   display: inline-block;
   text-decoration: inherit; 
     content: "\f061";
-    padding-right: 10px;}
+    padding-right: 10px;
 }
+
 
 
 /*----- Sticky -----*/
@@ -195,9 +201,19 @@ div.even_div {background: #f0f0f0;}
 #overview.home h4 {margin-top: 60px;}
 #overview.home .overview_display_block {padding: 0;}
 
+#overview.home .overview_display_block p {min-height: 110px; }
+
+
+/* TextBlock Homepage */
+
+#textblock {display: block; min-height: 275px; margin:0px; padding: 40px 0px; position: relative; background: url(../img/bkgd-header.jpg) no-repeat center center; -webkit-background-size: cover; background-size: cover;}
+
+#textblock p {color: #FFF ; text-align: center; margin: 12px auto 36px auto; font-size: 24px; line-height: 36px}
+
+
 
 /*-------------------------------------------------------------------------*/
-/*	5.	Features Style
+/*	5.	Features Style // homepage = download
 /*-------------------------------------------------------------------------*/
 #features .tabpanel_list li {color: #8f8f8f; padding: 5px 5px 5px 35px; line-height: 25px; margin-bottom: 25px; background: url(../images/price_checked.png) no-repeat left center;}
 #features .tabpanel_txtblock {width: 55%; display: block; float: left; font-weight: 600;}
@@ -291,7 +307,7 @@ background-image: linear-gradient(to left bottom, #9c3982 20%, #9a60a7 80%);colo
 	#main .workflow #flow-switcher>li.active:after {content: ""; position: absolute; height: 0; width: 0; left: 50%; margin-left: -12px; bottom: -24px; border: 12px solid transparent; border-top-color: #9A9A9A;}
 }
 
-#main .workflow #flow-boxes {zoom: 1; position: relative; z-index: 1; top: -65px; margin-bottom: -57px; overflow: hidden; height: 600px;}
+#main .workflow #flow-boxes {zoom: 1; position: relative; z-index: 1; top: -65px; margin-bottom: -57px; overflow: hidden; height: 400px;}
 #main .workflow #flow-boxes:after, #main .workflow #flow-boxes:before {content: ""; display: table;}
 #main .workflow #flow-boxes:after {clear: both;}
 
@@ -326,6 +342,7 @@ background-image: linear-gradient(to left bottom, #9c3982 20%, #9a60a7 80%);colo
 }
 
 #main .workflow #flow-boxes .codebox-container.hiddenLeft, #main .workflow #flow-boxes .codebox.hiddenLeft, #main .workflow #flow-boxes .text.hiddenLeft {-webkit-transform: scale(.85) translateX(-200px); transform: scale(.85) translateX(-200px);}
+
 #main .workflow #flow-boxes .codebox-container.hiddenRight, #main .workflow #flow-boxes .codebox.hiddenRight, #main .workflow #flow-boxes .text.hiddenRight {-webkit-transform: scale(1.1) translate(150px); transform: scale(1.1) translate(150px);}
 #main .workflow #flow-boxes .codebox-container.active, #main .workflow #flow-boxes .codebox.active, #main .workflow #flow-boxes .text.active {opacity: 1; -webkit-filter: none; -moz-filter: none; -ms-filter: none; -o-filter: none; filter: none; pointer-events: auto;}
 
@@ -335,7 +352,7 @@ background-image: linear-gradient(to left bottom, #9c3982 20%, #9a60a7 80%);colo
 	#main .workflow #flow-boxes .codebox-container.hiddenRight, #main .workflow #flow-boxes .codebox.hiddenRight, #main .workflow #flow-boxes .text.hiddenRight {display: none;}
 }
 
-#main .workflow #flow-boxes .text.active {z-index: 5;}
+#main .workflow #flow-boxes .text.active {z-index: 4;}
 #main .workflow #flow-boxes .codebox-container {-webkit-transition: opacity .2s, -webkit-transform .4s; transition: opacity .2s, transform .4s;}
 #main .workflow #flow-boxes .codebox-container.hiddenLeft {-webkit-transform: scale(.5); transform: scale(.5);}
 
@@ -394,7 +411,7 @@ background-image: linear-gradient(to left bottom, #9c3982 20%, #9a60a7 80%);colo
 	#main .workflow #flow-boxes #automatic-renewals .text {margin-top: 0!important; width: auto;}
 }
 
-#main .workflow #flow-boxes #automatic-renewals .text:before {width: 130px; height: 130px; left: -160px; top: -17px; background: none; background-image: url(../images/renewals.png); background-size: 100% 100%;}
+#main .workflow #flow-boxes #automatic-renewals .text:before {width: 130px; height: 130px; left: -160px; top: -17px; background: none; /* background-image: url(../images/renewals.png); background-size: 100% 100%;*/}
 
 @media screen and (max-width:1012px) {
 	#main .workflow #flow-boxes #automatic-renewals .text:before {top: -24px;}
@@ -410,7 +427,7 @@ background-image: linear-gradient(to left bottom, #9c3982 20%, #9a60a7 80%);colo
 /*	7.	Features Style / HOME PAGE tabbed switcher, not changed up ID here. 
 /*-------------------------------------------------------------------------*/
 #hmfeatures {text-align: center; padding-bottom: 40px;}
-#hmfeatures h2 {color: #fff;}
+#hmfeatures h2 {color: #463f73;}
 #hmfeatures p {font-size: 17px; line-height: 25px; margin: 0px 0px 70px 0px; color: #fff;}
 #hmfeatures .nav_tabs_wrap {padding-top: 20px;}
 #hmfeatures .nav-tabs {border: none; width: 73%; margin: 0 auto;}
@@ -446,11 +463,48 @@ border: none; color: #463f73; transition: all ease 0.5s; -webkit-transition: all
 
 #hmfeatures_detail .tabpanel_imgblock {width: 40%; display: block; float: right; max-height: 570px;}
 #hmfeatures_detail .tabpanel_imgblock img {max-height: 570px; float: right;}
-#hmfeatures_detail .tab-content > .tab-pane {margin-bottom: 30px; min-height: 50px;}
+#hmfeatures_detail .tab-content > .tab-pane {margin-bottom: 20px; margin-top: 20px; min-height: 580px;}
+
+
+#hmfeatures_detail .sample_display_block {background-color: #33bb95;height: 195px; color: #fff; padding: 20px; border-radius:6px; margin: 0 auto;}
+#hmfeatures_detail .sample_display_block p {color: #FFF; text-transform: uppercase; font-weight: 700; line-height: 18px; font-size: 16px;margin-top: 20px;}
+#hmfeatures_detail .sample_display_block .icon_box i {color: #fff;}
+
+#hmfeatures_detail .learn_more_btn {border: 1px solid #FFF; padding: 10px; border-radius: 4px; text-align: center; width: 140px; margin: 0 auto; cursor: pointer;}
+
+#hmfeatures_detail .learn_more_btn a {color: #FFF; text-transform: uppercase;font-size: 14px;}
+
+#hmfeatures_detail .learn_more_btn a:before { font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: inherit; 
+    content: "\f067"; 
+    padding-right: 8px;}
 
 
 
+/*-------------------------------------------------------------------------*/
+/*	4.	Alt Features Style
+/*-------------------------------------------------------------------------*/
 
+#altfeatures h2 {margin-top: 70px; text-align: left;}
+#altfeatures img {margin-top: 50px; text-align: left;}
+
+#altfeatures ul.checklist li {
+  padding-left: 24px; margin-bottom: 18px; line-height: 24px;
+}
+
+#altfeatures ul.checklist li:before {
+    font-family: FontAwesome;
+  content: "\f058";
+  display: inline-block;
+  margin-left: -1.6em;
+    color: #33bb95;
+ /*  height: 30px;*/
+    width: 30px;
+    font-size: 20px;
+}
 
 /*-------------------------------------------------------------------------*/
 /*	6.	Testimonials Style
@@ -555,6 +609,12 @@ border: none; color: #463f73; transition: all ease 0.5s; -webkit-transition: all
 ::-moz-placeholder {color: #8f8f8f;}
 :-ms-input-placeholder {color: #8f8f8f;}
 
+
+/* homepage overrides */
+#newsletter.home {display: block; min-height: 275px; margin:0px; padding: 40px 0px; position: relative; background: url(../img/bkgd-header.jpg) no-repeat center center; -webkit-background-size: cover; background-size: cover;}
+
+#newsletter.home h2 {color: #fff;}
+
 /*-------------------------------------------------------------------------*/
 /*	12.	Footer Style
 /*-------------------------------------------------------------------------*/
@@ -589,10 +649,24 @@ border: none; color: #463f73; transition: all ease 0.5s; -webkit-transition: all
 /*-------------------------------------------------------------------------*/
 /*	12A.	Brand Style
 /*-------------------------------------------------------------------------*/
-#brand {padding: 30px 0px 30px 0px; background-color: #f9fafc; margin: 50px auto;}
+#brand {padding: 30px 0px 30px 0px; background-color: #f9fafc;}
 #brand .brand_slider {position: relative;}
 #brand .brand_slider img {filter: grayscale(100%);}
 
+
+/*-------------------------------------------------------------------------*/
+/*	13AA.	LearnMore pull out drawer form
+/*-------------------------------------------------------------------------*/
+
+#learnmoreform {background-color: #f9fafc;}
+#learnmoreform .form-group {margin: 20px 40px}
+#learnmoreform .form-group input {height: 40px; box-shadow: none;}
+#learnmoreform form label {color: #ee1fb1;font-weight: 400; line-height: 18px; font-size:14px; margin-bottom: 5px;}
+#learnmoreform .nr {color: #666;}
+p.required {color: #ee1fb1;font-weight: 400; line-height: 18px; font-size:14px;text-align: right; margin-bottom: 10px;}
+#learnmoreform p {font-size: 14px;line-height: 18px; margin-top: 24px;}
+.row.second{background-color: #FFF; border-top: 1px solid #ccc;}
+button.submit {width: 100%;}
 
 /*-------------------------------------------------------------------------*/
 /*	13.	Offcanvas Menu Style
@@ -600,7 +674,7 @@ border: none; color: #463f73; transition: all ease 0.5s; -webkit-transition: all
 #sp-account {height: 50px; z-index: 999999;}
 #offcanvas_toggler {color: #fff; font-size: 25px; padding-top: 12px; font-weight: 600; height: 45px; text-transform: uppercase; float: right; border: 0 none; border-radius: 0; transition: color 400ms ease 0s, background-color 400ms ease 0s, border-color 400ms ease 0s;}
 .offcanvas_overlay {opacity:0; -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;}
-body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.8); opacity: 1; z-index: 9999;}
+body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.8); opacity: 0.5; z-index: 9999;}
 .close_offcanvas {position: absolute; top: 25px; right: 15px; z-index: 1; color: #fff; border-radius: 100%; width: 22px; height: 22px; line-height: 13px; text-align: center; font-size: 12px; background: rgba(0, 0, 0, 0.3); padding: 5px 3px 5px 2px;}
 .close_offcanvas:hover {background: rgba(0, 0, 0, 0.5); color: #fff;}
 .offcanvas_menu {width: 280px; height: 100%; position: fixed; right: -280px; top: 0px; opacity: 0; background-color: #464646; z-index: 99999;}
@@ -613,7 +687,35 @@ body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 
 .offcanvas {width: 100%; height: 100%; position: relative;}
 .offcanvas .offcanvas_menu {opacity: 1;}
 .bodycanvas {right: 0px;}
+
+
 .sp_module_content .menu {margin: 0px -20px; width: 117%;}
+
+
+
+/*-------------------------------------------------------------------------*/
+/*	13.	Offcanvas Form Style
+/*-------------------------------------------------------------------------
+#sp-account {height: 50px; z-index: 999999;}
+#offcanvas_toggler {color: #fff; font-size: 25px; padding-top: 12px; font-weight: 600; height: 45px; text-transform: uppercase; float: right; border: 0 none; border-radius: 0; transition: color 400ms ease 0s, background-color 400ms ease 0s, border-color 400ms ease 0s;}
+.offcanvas_overlay {opacity:0; -webkit-transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s; transition: opacity 0.5s, width 0.1s 0.5s, height 0.1s 0.5s;}
+body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 0; right: 0; background: rgba(0, 0, 0, 0.8); opacity: 0.5; z-index: 9999;}
+.close_offcanvas {position: absolute; top: 25px; right: 15px; z-index: 1; color: #fff; border-radius: 100%; width: 22px; height: 22px; line-height: 13px; text-align: center; font-size: 12px; background: rgba(0, 0, 0, 0.3); padding: 5px 3px 5px 2px;}
+.close_offcanvas:hover {background: rgba(0, 0, 0, 0.5); color: #fff;}*/
+.offcanvas_form {width: 375px; height: 100%; position: fixed; right: -375px; top: 0px; opacity: 0; background-color: #f9fafc; z-index: 99999;}
+.offcanvas_form .offcanvas_form_inner {padding: 0px;}
+.offcanvas_form .offcanvas_form_inner .sp_module_title {height: 70px; width:100%;position: relative; background: url(../img/bkgd-header.jpg) no-repeat center center; -webkit-background-size: cover; background-size: cover}
+
+.offcanvas_form .offcanvas_form_inner .sp_module .sp_module_title h3 {font-size: 18px; font-weight: 800; line-height: 1; padding: 25px 20px 25px; color: #fff; text-transform: uppercase}
+
+.offcanvas_form {-webkit-transition: opacity 400ms cubic-bezier(0.7, 0, 0.3, 1), right 400ms cubic-bezier(0.7, 0, 0.3, 1); transition: opacity 400ms cubic-bezier(0.7, 0, 0.3, 1), right 400ms cubic-bezier(0.7, 0, 0.3, 1);}
+.offcanvas {width: 100%; height: 100%; position: relative;}
+.offcanvas .offcanvas_form {opacity: 1;}
+.bodycanvas {right: 0px;}
+/*.sp_module_content .menu {margin: 0px -20px; width: 117%;}*/
+
+
+
 
 /*-------------------------------------------------------------------------*/
 /*	14.	Responsive Style
