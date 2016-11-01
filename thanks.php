@@ -45,9 +45,6 @@ if ($result === FALSE) {
     
     <!-- Mobile Specific -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-    <!-- Favicons Icon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 	
     <title>Submission Received | Askem Inc.</title>
     
