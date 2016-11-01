@@ -2,6 +2,8 @@
 jQuery(function($) {
 	"use strict";
 	
+	$('a').filter(function(idx, a) { return a.href == 'https://quote.askem.com/'; }).attr('href', '#').parent().addClass('form_toggler');
+	
     $('#offcanvas_toggler').on('click', function(event) {
         event.preventDefault();
         $('body').addClass('offcanvas');
