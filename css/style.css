@@ -735,6 +735,7 @@ body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 
 	#header .header_content {padding: 20px;}
 	#header.home .header_content {padding: 40px 0 0 0;}
     #header .header_content h1 {font-size: 43px;}
+    #overview .sample_display_block {height: 300px;width: 220px;}
 	#header .header_content h1 span {font-size: 55px;}
 	#header .header_content h4 {margin: 40px 0 0;}
 	#header .get_started_btn {margin: 70px auto 0;}
@@ -786,7 +787,7 @@ body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 
 	body h2 {margin-bottom: 30px; line-height: 30px; font-size: 30px;}
 	#header .brand_slider_wrapp {bottom: -155px;}
 	#overview p {width: 90%;}
-    #overview .sample_display_block, #hmfeatures_detail .sample_display_block {margin-bottom: 20px;}
+    #overview .sample_display_block, #hmfeatures_detail .sample_display_block {margin: 0 auto 20px auto;}
 	#features .tab-content > .tab-pane {min-height: 570px;}
 	#features .tabpanel_list li {line-height: 20px; background: rgba(0, 0, 0, 0) url("../images/price_checked.png") no-repeat scroll left 6px; margin-bottom: 7px;}
 	#features .nav-tabs > li > a {font-size: 13px; padding: 15px 10.2px 15px 11px;}
@@ -826,7 +827,7 @@ body.offcanvas .offcanvas_overlay {position: absolute; top: 0; left: 0; bottom: 
 	@media screen and (-webkit-min-device-pixel-ratio:0) {
 		#features .nav-tabs > li > a {font-size: 12px; padding: 15px 6.2px 15px 6px;}		
 	}
-	#newsletter input {width: 169px;}
+	#newsletter input {width: 163px;}
 	#footer .coppyright {width: 69%;}
 	#footer .social {width: 30%;}
 
