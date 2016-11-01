@@ -520,10 +520,10 @@
         <div id="newsletter" class="home">>
         	<div class="container">
             	<h2>Survey real, non incentivized people!</h2>
-                            <form action="#">
-                	<input type="text" name="Name" id="d2_full_name" value="Full Name" onfocus="if(this.value=='Full Name') this.value='';" />
-                	<input type="text" name="Company_Name" id="d2_comp_name" value="Company Name" onfocus="if(this.value=='Company Name') this.value='';" />
-                    <input type="text" name="Email" id="d2_email" value="E-mail Address" onfocus="if(this.value=='E-mail Address') this.value='';" />
+                            <form action="/thanks.php" method="post">
+                	<input type="text" name="full_name" id="d2_full_name" value="Full Name" onfocus="if(this.value=='Full Name') this.value='';" />
+                	<input type="text" name="company" id="d2_comp_name" value="Company Name" onfocus="if(this.value=='Company Name') this.value='';" />
+                    <input type="text" name="email" id="d2_email" value="E-mail Address" onfocus="if(this.value=='E-mail Address') this.value='';" />
                     <button type="submit" class="btn btn_getstart">Get Started</button>
                 </form>
             </div>
@@ -589,35 +589,36 @@
                 <div class="sp_module_title"><h3>learn more</h3></div>
                 <div class="sp_module_content">
                    <div id="learnmoreform">   
-<form>
+<form action="/thanks.php" method="post">
     <div class="form-group">
     <label for="name">Name</label>
-    <input type="text" required class="form-control" class="error" id="name" placeholder="First name Last name" aria-required="true" aria-invalid="true">
+    <input type="text" name="full_name" required class="form-control" class="error" id="name" placeholder="First Name, Last Name" aria-required="true" aria-invalid="true">
   </div>
   <div class="form-group">
     <label for="email">Email address</label>
-    <input type="email" class="form-control" class="error" id="email" placeholder="Email" aria-required="true" aria-invalid="true">
+    <input type="email" name="email" required class="form-control" class="error" id="email" placeholder="Email" aria-required="true" aria-invalid="true">
   </div>
      <div class="form-group">
     <label for="company" class="nr">Company</label>
-    <input type="text" class="form-control" id="company" placeholder="Company">
+    <input type="text" name="company" class="form-control" id="company" placeholder="Company">
   </div>
          <div class="form-group">
-    <label for="phone">Phone</label>
-    <input type="text" class="form-control" class="error" id="phone" placeholder="Phone Number" aria-required="true" aria-invalid="true">
+    <label for="phone" class="nr">Phone</label>
+    <input type="text" name="phone" class="form-control" class="error" id="phone" placeholder="Phone Number" aria-required="false" aria-invalid="true">
   </div>
         <div class="form-group"> <p class="required">Mandatory field</p></div>
     <div class="second">
 
     <div class="form-group">
     <label for="description" class="nr">Tell us about your project</label>
-    <textarea class="form-control" id="description" rows="3" placeholder="eg: number of responders, project description"></textarea>
+    <textarea class="form-control" name="description" id="description" rows="3" placeholder="eg: number of responders, project description"></textarea>
   </div>
 
  <div class="form-group"> <button type="submit" class="btn btn_getstart submit">Submit</button>
      <p>Our representative will be in contact with you in the next 24 hours.</p></div>
         </div>
 </form>
+
     </div> 
                 </div>
             </div>

@@ -246,35 +246,35 @@ we don’t talk the talk, we walk the walk.</p>
                 <div class="sp_module_title"><h3>learn more</h3></div>
                 <div class="sp_module_content">
                    <div id="learnmoreform">   
-<form>
-    <div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" required class="form-control" class="error" id="name" placeholder="First name Last name" aria-required="true" aria-invalid="true">
-  </div>
-  <div class="form-group">
-    <label for="email">Email address</label>
-    <input type="email" class="form-control" class="error" id="email" placeholder="Email" aria-required="true" aria-invalid="true">
-  </div>
-     <div class="form-group">
-    <label for="company" class="nr">Company</label>
-    <input type="text" class="form-control" id="company" placeholder="Company">
-  </div>
-         <div class="form-group">
-    <label for="phone">Phone</label>
-    <input type="text" class="form-control" class="error" id="phone" placeholder="Phone Number" aria-required="true" aria-invalid="true">
-  </div>
-        <div class="form-group"> <p class="required">Mandatory field</p></div>
-    <div class="second">
-
-    <div class="form-group">
-    <label for="description" class="nr">Tell us about your project</label>
-    <textarea class="form-control" id="description" rows="3" placeholder="eg: number of responders, project description"></textarea>
-  </div>
-
- <div class="form-group"> <button type="submit" class="btn btn_getstart submit">Submit</button>
-     <p>Our representative will be in contact with you in the next 24 hours.</p></div>
-        </div>
-</form>
+					   <form action="/thanks.php" method="post">
+					       <div class="form-group">
+					       <label for="name">Name</label>
+					       <input type="text" name="full_name" required class="form-control" class="error" id="name" placeholder="First Name, Last Name" aria-required="true" aria-invalid="true">
+					     </div>
+					     <div class="form-group">
+					       <label for="email">Email address</label>
+					       <input type="email" name="email" required class="form-control" class="error" id="email" placeholder="Email" aria-required="true" aria-invalid="true">
+					     </div>
+					        <div class="form-group">
+					       <label for="company" class="nr">Company</label>
+					       <input type="text" name="company" class="form-control" id="company" placeholder="Company">
+					     </div>
+					            <div class="form-group">
+					       <label for="phone" class="nr">Phone</label>
+					       <input type="text" name="phone" class="form-control" class="error" id="phone" placeholder="Phone Number" aria-required="false" aria-invalid="true">
+					     </div>
+					           <div class="form-group"> <p class="required">Mandatory field</p></div>
+					       <div class="second">
+					   
+					       <div class="form-group">
+					       <label for="description" class="nr">Tell us about your project</label>
+					       <textarea class="form-control" name="description" id="description" rows="3" placeholder="eg: number of responders, project description"></textarea>
+					     </div>
+					   
+					    <div class="form-group"> <button type="submit" class="btn btn_getstart submit">Submit</button>
+					        <p>Our representative will be in contact with you in the next 24 hours.</p></div>
+					           </div>
+					   </form>
     </div> 
                 </div>
             </div>
