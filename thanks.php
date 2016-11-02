@@ -6,7 +6,7 @@ $full_name = $_POST['full_name'];
 $description = $_POST['description'];
 $leadID = trim(com_create_guid(), '{}');
 
-$url = 'http://b00efe1d45b54369be28736a4235a52f.cloudapp.net/0/external/leads';
+$url = 'https://api.askem.com/0/external/leads';
 $data = array(
 	'firstName' => $full_name,
 	'company' => $company,
