@@ -233,24 +233,5 @@ jQuery(function($) {
         };
     })(jQuery);
 	
-	/* Input Form */
-	$('#full_name, #d2_full_name').blur(function(){
-		var test = $('#full_name, #d2_full_name').val();
-		if(test == '' || test == null){
-			$('#full_name, #d2_full_name').val('Full Name');
-		}
-	});
-	$('#comp_name, #d2_comp_name').blur(function(){
-		var test = $('#comp_name, #d2_comp_name').val();
-		if(test == '' || test == null){
-			$('#comp_name, #d2_comp_name').val('Company Name');
-		}
-	});
-	$('#email, #d2_email, d3_email').blur(function(){
-		var test = $('#email, #d2_email, d3_email').val();
-		if(test == '' || test == null){
-			$('#email, #d2_email, d3_email').val('E-mail Address');
-		}
-	});
 	
 });

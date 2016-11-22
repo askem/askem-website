@@ -232,7 +232,7 @@ if ($result === FALSE) {
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
-    <script src="js/js-functions.js?161114"></script>
+    <script src="js/js-functions.js?161122"></script>
 	<!-- <? echo $leadID ?> -->
 	<script>
 	  window.intercomSettings = {

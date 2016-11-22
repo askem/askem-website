@@ -621,10 +621,10 @@
         <div id="newsletter" class="home">>
         	<div class="container">
             	<h2>Survey real, non incentivized people!</h2>
-                            <form action="/thanks.php" method="post">
-                	<input type="text" name="full_name" id="d2_full_name" value="Full Name" onfocus="if(this.value=='Full Name') this.value='';" />
-                	<input type="text" name="company" id="d2_comp_name" value="Company Name" onfocus="if(this.value=='Company Name') this.value='';" />
-                    <input type="text" name="email" id="d2_email" value="E-mail Address" onfocus="if(this.value=='E-mail Address') this.value='';" />
+                <form action="/thanks.php" method="post">
+                	<input type="text" name="full_name" id="d2_full_name" placeholder="Full Name" required class="error" aria-required="true" aria-invalid="true" />
+                	<input type="text" name="company" id="d2_comp_name" placeholder="Company Name"  />
+                    <input type="email" name="email" id="d2_email" placeholder="E-mail Address" required class="error" aria-required="true" aria-invalid="true" />
                     <button type="submit" class="btn btn_getstart">Get Started</button>
                 </form>
             </div>
@@ -743,7 +743,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.fancybox.js"></script>
-    <script src="js/js-functions.js?161114"></script> 
+    <script src="js/js-functions.js?161122"></script> 
     
     <script src="js/scripts.js"></script>
     <script src="js/carousel-3d.js"></script>
