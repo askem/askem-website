@@ -592,7 +592,7 @@ border: none; color: #463f73; transition: all ease 0.5s; -webkit-transition: all
 #newsletter {display: inline-block; min-height: 275x; margin: 0px; padding: 100px 0px 42px; background-color: #f9fafc;}
 #newsletter h2 {font-size: 50px; line-height: 50px; color: #463f73; text-align: center; font-weight: 700;}
 #newsletter p {font-size: 22px; line-height: 25px; color: #fff; text-align: center; margin-bottom: 80px; font-weight: 500;}
-#newsletter input {background: #fff; border-radius: 5px; padding: 13px 15px; font-size: 16px; text-transform: capitalize; border: 1px solid #d7d7d7; color: #161719; width: 270px; margin-right: 8px;}
+#newsletter input {background: #fff; border-radius: 5px; padding: 13px 15px; font-size: 16px; border: 1px solid #d7d7d7; color: #161719; width: 270px; margin-right: 8px;}
 #newsletter .btn_getstart {padding: 12px 20px; margin-top: -5px; font-weight: 600;}
 
 #newsletter .btn_getstart:after {

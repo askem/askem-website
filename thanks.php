@@ -1,13 +1,34 @@
 <?php
+
+function genGUID(){
+    if (function_exists('com_create_guid')){
+        return com_create_guid();
+    }
+    else {
+        mt_srand((double)microtime()*10000);//optional for php 4.2.0 and up.
+        $charid = strtoupper(md5(uniqid(rand(), true)));
+        $hyphen = chr(45);// "-"
+        $uuid = chr(123)// "{"
+            .substr($charid, 0, 8).$hyphen
+            .substr($charid, 8, 4).$hyphen
+            .substr($charid,12, 4).$hyphen
+            .substr($charid,16, 4).$hyphen
+            .substr($charid,20,12)
+            .chr(125);// "}"
+        return $uuid;
+    }
+}
+
 $email = $_POST['email'];
 $company = $_POST['company'];
 $phone = $_POST['phone'];
 $full_name = $_POST['full_name'];
 $description = $_POST['description'];
-$leadID = trim(com_create_guid(), '{}');
+$leadID = trim(genGUID(), '{}');
 
-$url = 'https://api.askem.com/0/external/leads';
+$url = 'https://api.askem.com/0/external/leads?submit=1';
 $data = array(
+	'source' => 'know.askem.com',
 	'firstName' => $full_name,
 	'company' => $company,
 	'email' => $email,
@@ -272,6 +293,7 @@ s.parentNode.insertBefore(t,s)}(window,document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
  fbq('init', '1848903508664772'); 
 fbq('track', 'PageView');
+fbq('trackCustom', 'LeadKnow');
 </script>
 <noscript>
  <img height="1" width="1" 
